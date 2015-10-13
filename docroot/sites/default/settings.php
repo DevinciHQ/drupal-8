@@ -693,4 +693,8 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 $settings['install_profile'] = 'standard';
-$config_directories['sync'] = 'sites/default/files/config_BQ9c3M5FqCmOAkxK_My-ytP8retnssuVUqj_zBSmRRu9krU0uN581iAIluoC9Yh1uHOqhDeDaA/sync';
+
+$config_directories = array(
+  CONFIG_ACTIVE_DIRECTORY => './../config/active',
+  CONFIG_STAGING_DIRECTORY => './../config/staging',
+);
