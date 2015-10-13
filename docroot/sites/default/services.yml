@@ -142,3 +142,9 @@ parameters:
     - sftp
     - webcal
     - rtsp
+services:
+  config.storage:
+    class: Drupal\Core\Config\CachedStorage
+    arguments: ['@config.storage.active', '@cache.config']
+  config.storage.active:
+    alias: config.storage.file

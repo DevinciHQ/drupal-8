@@ -698,3 +698,5 @@ $config_directories = array(
   CONFIG_ACTIVE_DIRECTORY => './../config/active',
   CONFIG_STAGING_DIRECTORY => './../config/staging',
 );
+
+$settings['bootstrap_config_storage'] = array('Drupal\Core\Config\BootstrapConfigStorageFactory', 'getFileStorage');
