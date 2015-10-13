@@ -1,0 +1,10 @@
+uuid: a8805719-0733-4a01-ad08-08bceb607001
+langcode: en
+status: false
+dependencies:
+  module:
+    - node
+id: node.rss
+label: RSS
+targetEntityType: node
+cache: true

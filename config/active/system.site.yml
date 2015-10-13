@@ -1,0 +1,12 @@
+uuid: db0f5360-946f-4d61-b736-547f06ccac1f
+name: 'Drupal 8'
+mail: admin@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
