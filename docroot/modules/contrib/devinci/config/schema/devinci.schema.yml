@@ -1,4 +1,4 @@
-environment.devinci.*:
+environment.environment.*:
   type: config_entity
   label: 'Environment config'
   mapping:
