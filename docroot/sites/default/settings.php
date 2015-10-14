@@ -840,7 +840,7 @@ switch(ENVIRONMENT) {
     /**
      * Development Environment
      */
-    case 'development':
+    case 'dev':
         $settings['features_master_temp_enabled_modules'] = array(
                 'dblog',
                 'devel',
@@ -875,7 +875,7 @@ switch(ENVIRONMENT) {
     /**
      * Production Environment
      */
-    case 'production':
+    case 'prod':
         // Enable the ability to send emails - via core mail in this case,
         // but it coulbe be update to use SMTP or mail API.
         $settings['mail_system'] = array (
@@ -909,21 +909,25 @@ function devinci_custom_environment_switch($target_env, $current_env) {
         case 'local':
             // Example: Clear all caches. (drush cc all)
             drupal_flush_all_caches();
+            drupal_set_message("Local environment");
             // Example: Revert a features_master module, which is assumed to be called
             // 'custom_config'. Update to the name of your master module. This saves
             // the step of manually reverting when switching environments.
             break;
 
-        case 'development':
+        case 'dev':
             drupal_flush_all_caches();
+            drupal_set_message("Dev environment");
             break;
 
         case 'test':
             drupal_flush_all_caches();
+            drupal_set_message("Test environment");
             break;
 
-        case 'production':
+        case 'prod':
             drupal_flush_all_caches();
+            drupal_set_message("Prod environment");
             break;
     }
 }
