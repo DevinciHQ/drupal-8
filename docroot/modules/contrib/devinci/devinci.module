@@ -14,24 +14,6 @@ function devinci_init() {
 }
 
 /**
- * Implements hook_environment().
- */
-function devinci_environment() {
-  $environments = array();
-  // Environment module already creates environments for 'development' and 'production'.
-  $environments['local'] = array(
-    'label' => t('Local'),
-    'description' => t('Local development environment'),
-  );
-  $environments['test'] = array(
-    'label' => t('Testing site'),
-    'description' => t('Testing sites are used for QA or automated testing.'),
-  );
-
-  return $environments;
-}
-
-/**
  * Implements hook_environment_indicator_matched_indicator_alter().
  */
 function devinci_environment_indicator_matched_indicator_alter(&$env) {
