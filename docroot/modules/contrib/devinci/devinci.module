@@ -1,19 +1,6 @@
 <?php
 
 /**
- * Implements hook_init().
- */
-function devinci_init() {
-  // Set some items for the environment and environment_indicator (this is very light weight).
-  if (defined('ENVIRONMENT') && function_exists('environment_current') && function_exists('environment_switch')) {
-    $current_env = environment_current();
-    if ($current_env != ENVIRONMENT) {
-      environment_switch(ENVIRONMENT, TRUE);
-    }
-  }
-}
-
-/**
  * Implements hook_environment_indicator_matched_indicator_alter().
  */
 function devinci_environment_indicator_matched_indicator_alter(&$env) {
